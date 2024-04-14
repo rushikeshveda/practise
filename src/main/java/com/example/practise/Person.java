@@ -8,10 +8,10 @@ public class Person {
     private LocalDate birthday;
 
     public Person(String firstName, String lastName, String address, LocalDate birthday) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
-        this.birthday = birthday;
+        setFirstName(firstName);
+        setLastName(lastName);
+        setAddress(address);
+        setBirthday(birthday);
     }
 
     private String formatName(String name){
