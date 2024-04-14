@@ -1,6 +1,7 @@
 package com.example.practise;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Person {
     private String firstName, lastName, address;
@@ -56,6 +57,13 @@ public class Person {
     }
 
     public void setBirthday(LocalDate birthday) {
-        this.birthday = birthday;
+        if (birthday.isAfter(LocalDate.now()))
+            throw new IllegalArgumentException("Birthday cant be in future");
+        else
+            this.birthday = birthday;
+    }
+
+    public int getAge() {
+        return Period.between(birthday,LocalDate.now()).getYears();
     }
 }
