@@ -56,6 +56,6 @@ public class Person {
     }
 
     public void setBirthday(LocalDate birthday) {
-        this.birthday = birthday;
+
     }
 }
