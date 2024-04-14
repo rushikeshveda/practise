@@ -48,7 +48,7 @@ public class Student extends Person{
 
         double total = 0;
         for(Grade grade : gardes)
-            total += grade.getGrade;
+            total += grade.getGrade();
 
         return total/gardes.size();
     }
