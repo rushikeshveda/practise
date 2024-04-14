@@ -66,4 +66,8 @@ public class Person {
     public int getAge() {
         return Period.between(birthday,LocalDate.now()).getYears();
     }
+
+    public String toString(){
+        return String.format("%s %s is %d years old", firstName, lastName, getAge());
+    }
 }
